@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹스토리보이 웹 퍼블리셔 웹 레퍼런스 사이트입니다.">
+    <meta name="keyword" content="javascript, clintx, jquery, css, webs, webstoryboy, script, Mouse Event">
+    <title>Javascript : Mouse Event</title>
+
+    <!-- 기본 구성 스타일 -->
+    <link rel="stylesheet" href="../assets/css/basic.css">
+
+    <style>
+        .cursor {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            height: 100vh;
+            padding: 10%;
+        }
+
+        .cursor li {
+            width: 12%;
+            border: 1px solid #fff;
+            margin: 1%;
+            text-align: center;
+            padding: 2vw 0;
+            box-sizing: border-box;
+            ;
+        }
+
+        .cursor li em {
+            font-style: normal;
+            font-family: 'S-CoreDream-3Light';
+
+        }
+    </style>
+</head>
+
+<body class="style2">
+
+    <section id="contents">
+        <aside class="left">
+            <h1>CSS</h1>
+            <h2>Cursor</h2>
+            <div class="infor">
+                <ul>
+                    <li><em>alias</em> : 커서의 모양을 alias으로 설정</li>
+                    <li><em>all-scroll</em> : 커서의 모양을 all-scroll으로 설정</li>
+                    <li><em>auto</em> : 커서의 모양을 auto으로 설정</li>
+                    <li><em>cell</em> : 커서의 모양을 cell으로 설정</li>
+                    <li><em>context-menu</em> : 커서의 모양을 context-menu</li>
+                    <li><em>col-resize</em> : 커서의 모양을 col-resize으로 설정</li>
+                    <li><em>copy</em> : 커서의 모양을 copy으로 설정</li>
+                    <li><em>crosshair</em> : 커서의 모양을 crosshair으로 설정</li>
+                    <li><em>default</em> : 커서의 모양을 default으로 설정</li>
+                    <li><em>e-resize</em> : 커서의 모양을 e-resize으로 설정</li>
+                    <li><em>ew-resize</em> : 커서의 모양을 ew-resize으로 설정</li>
+                    <li><em>grab</em> : 커서의 모양을 grab으로 설정</li>
+                    <li><em>grabbing</em> : 커서의 모양을 grabbing으로 설정</li>
+                    <li><em>help</em> : 커서의 모양을 help으로 설정</li>
+                    <li><em>move</em> : 커서의 모양을 move으로 설정</li>
+                    <li><em>n-resize</em> : 커서의 모양을 n-resize으로 설정</li>
+                    <li><em>ne-resize</em> : 커서의 모양을 ne-resize으로 설정</li>
+                    <li><em>nesw-resize</em> : 커서의 모양을 nesw-resize</li>
+                    <li><em>ns-resize</em> : 커서의 모양을 ns-resize으로 설정</li>
+                    <li><em>nw-resize</em> : 커서의 모양을 nw-resize으로 설정</li>
+                    <li><em>nwse-resize</em> : 커서의 모양을 nwse-resize</li>
+                    <li><em>no-drop</em> : 커서의 모양을 no-drop으로 설정</li>
+                    <li><em>none</em> : 커서의 모양을 none으로 설정</li>
+                    <li><em>not-allowed</em> : 커서의 모양을 not-allowed</li>
+                    <li><em>pointer</em> : 커서의 모양을 pointer으로 설정</li>
+                    <li><em>progress</em> : 커서의 모양을 progress으로 설정</li>
+                    <li><em>row-resize</em> : 커서의 모양을 row-resize으로 설정</li>
+                    <li><em>s-resize</em> : 커서의 모양을 s-resize으로 설정</li>
+                    <li><em>se-resize</em> : 커서의 모양을 se-resize으로 설정</li>
+                    <li><em>sw-resize</em> : 커서의 모양을 sw-resize으로 설정</li>
+                    <li><em>text</em> : 커서의 모양을 text으로 설정</li>
+                    <li><em>URL</em> : 커서의 이미지 주소를 설정</li>
+                    <li><em>vertical-text</em> : 커서의 모양을 vertical-text</li>
+                    <li><em>w-resize</em> : 커서의 모양을 w-resize으로 설정</li>
+                    <li><em>wait</em> : 커서의 모양을 wait으로 설정</li>
+                    <li><em>zoom-in</em> : 커서의 모양을 zoom-in으로 설정</li>
+                    <li><em>zoom-out</em> : 커서의 모양을 zoom-out으로 설정</li>
+                </ul>
+            </div>
+        </aside>
+        <section class="right">
+            <section class="content">
+                <ul class="cursor">
+                    <li style="cursor: alias;"><em>alias</em></li>
+                    <li style="cursor: all-scroll;"><em>all-scroll</em></li>
+                    <li style="cursor: auto;"><em>auto</em></li>
+                    <li style="cursor: cell;"><em>cell</em></li>
+                    <li style="cursor: context-menu;"><em>context-menu</em></li>
+                    <li style="cursor: col-resize;"><em>col-resize</em></li>
+                    <li style="cursor: copy;"><em>copy</em></li>
+                    <li style="cursor: crosshair;"><em>crosshair</em></li>
+                    <li style="cursor: default;"><em>default</em></li>
+                    <li style="cursor: e-resize;"><em>e-resize</em></li>
+                    <li style="cursor: ew-resize;"><em>ew-resize</em></li>
+                    <li style="cursor: grab;"><em>grab</em> </li>
+                    <li style="cursor: grabbing;"><em>grabbing</em></li>
+                    <li style="cursor: help;"><em>help</em></li>
+                    <li style="cursor: move;"><em>move</em></li>
+                    <li style="cursor: n-resize;"><em>n-resize</em></li>
+                    <li style="cursor: ne-resize;"><em>ne-resize</em></li>
+                    <li style="cursor: nesw-resize;"><em>nesw-resize</em></li>
+                    <li style="cursor: ns-resize;"><em>ns-resize</em></li>
+                    <li style="cursor: nw-resize;"><em>nw-resize</em></li>
+                    <li style="cursor: nwse-resize;"><em>nwse-resize</em></li>
+                    <li style="cursor: no-drop;"><em>no-drop</em></li>
+                    <li style="cursor: none;"><em>none</em></li>
+                    <li style="cursor: not-allowed;"><em>not-allowed</em></li>
+                    <li style="cursor: pointer;"><em>pointer</em></li>
+                    <li style="cursor: progress;"><em>progress</em></li>
+                    <li style="cursor: row-resize;"><em>row-resize</em></li>
+                    <li style="cursor: s-resize;"><em>s-resize</em></li>
+                    <li style="cursor: se-resize;"><em>se-resize</em></li>
+                    <li style="cursor: sw-resize;"><em>sw-resize</em></li>
+                    <li style="cursor: text;"><em>text</em></li>
+                    <li style="cursor: URL;"><em>URL</em></li>
+                    <li style="cursor: vertical-text;"><em>vertical-text</em></li>
+                    <li style="cursor: w-resize;"><em>w-resize</em></li>
+                    <li style="cursor: wait;"><em>wait</em></li>
+                    <li style="cursor: zoom-in;"><em>zoom-in</em></li>
+                    <li style="cursor: zoom-out;"><em>zoom-out</em></li>
+                </ul>
+            </section>
+
+        </section>
+    </section>
+
+
+    <!-- 스크립트 -->
+    <script src="../assets/js/jquery-1.12.4.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

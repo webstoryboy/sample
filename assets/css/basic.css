@@ -1,0 +1,61 @@
+@font-face { font-family: 'NIXGONM-Vb'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/NIXGONM-Vb.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'NIXGONL-Vb'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/NIXGONL-Vb.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'S-CoreDream-3Light'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face {
+    font-family: 'Cafe24Oneprettynight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+:root {
+    font-family: 'S-CoreDream-3Light';
+    font-size: 16px;
+    line-height: 1.6;
+}
+* {padding: 0; margin: 0; box-sizing: border-box;}
+li {list-style: none;}
+a {color: #333; text-decoration: none;}
+
+
+body.style1 {background: #79BDAD; color: #fff;}
+body.style1 #contents .left {background: #3A7A7F}
+body.style2 {background: #F0918E; color: #fff;}
+body.style2 #contents .left {background: #E26E6B}
+body.style2 #contents .left h2 {color: #E26E6B}
+
+
+#contents {display: flex; width: 100%; height: 100vh;}
+#contents .left {width: 25%; padding: 2vw; height: 100vh; overflow-y: auto;}
+#contents .right {width: 75%; height: 100vh; box-sizing: border-box;}
+#contents .left h1 {
+    font-family: 'NIXGONM-Vb';
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 2vw;
+}
+#contents .left h2 {
+    padding: .51vw 0;
+    margin: 1vw 0;
+    font-family: 'NIXGONL-Vb';
+    font-weight: bold;
+    background: #fff;
+    color: #3A7A7F;
+    text-align: center;
+}
+#contents .left .infor {
+    font-size: 16px;
+}
+#contents .left .infor li:hover {
+    cursor: grab;
+}
+#contents .left .infor em {
+    font-style: normal;
+    border-bottom: 1px dashed #fff;
+}
+#contents .right .infor {
+    position: absolute; 
+    right: 1vw; bottom: 1vw;
+}
+
+
+

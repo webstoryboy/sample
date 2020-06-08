@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹스토리보이 웹 퍼블리셔 웹 레퍼런스 사이트입니다.">
+    <meta name="keyword" content="javascript, clintx, jquery, css, webs, webstoryboy, script, Mouse Event">
+    <title>Javascript : Mouse Event</title>
+
+    <!-- 기본 구성 스타일 -->
+    <link rel="stylesheet" href="../assets/css/basic.css">
+
+    <style>
+        body {
+            cursor: none;
+        }
+
+        .cursor {
+            position: absolute;
+            left: -100px;
+            top: -100px;
+            border: 2px solid #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            z-index: 10000;
+            user-select: none;
+            pointer-events: none;
+            transition: background 0.6s ease-in-out, border-color 0.2s ease-in-out;
+        }
+
+        .cursor.active {
+            border-color: #000;
+            background: rgba(0, 0, 0, 0.5);
+
+        }
+    </style>
+</head>
+
+<body class="style1">
+
+    <section id="contents">
+        <aside class="left">
+            <h1>javascript</h1>
+            <h2>Mouse Event</h2>
+            <div class="infor">
+                <ul>
+                    <li><em>clientX</em> : 브라우저를 기준으로 마우스의 X좌표값을 반환합니다.</li>
+                    <li><em>clientY</em> : 브라우저를 기준으로 마우스의 Y좌표값을 반환합니다.</li>
+                    <li><em>offsetX</em> : 이벤트 요소를 기준으로 마우스의 X좌표값을 반환합니다.</li>
+                    <li><em>offsetY</em> : 이벤트 요소를 기준으로 마우스의 Y좌표값을 반환합니다.</li>
+                    <li><em>pageX</em> : 문서 전체를 기준으로 마우스의 X좌표값을 반환합니다.</li>
+                    <li><em>pageY</em> : 문서 전체를 기준으로 마우스의 Y좌표값을 반환합니다.</li>
+                    <li><em>screenX</em> : 모니터 화면을 기준으로 마우스의 X좌표값을 반환합니다.</li>
+                    <li><em>screenY</em> : 모니터 화면을 기준으로 마우스의 Y좌표값을 반환합니다.</li>
+                </ul>
+            </div>
+        </aside>
+        <section class="right">
+            <section class="content">
+                <div class="cursor"></div>
+            </section>
+            <div class="infor">
+                <ul>
+                    <li>clientX : <span class="clientX">0</span>px</li>
+                    <li>clientY : <span class="clientY">0</span>px</li>
+                    <li>offsetX : <span class="offsetX">0</span>px</li>
+                    <li>offsetY : <span class="offsetY">0</span>px</li>
+                    <li>pageX : <span class="pageX">0</span>px</li>
+                    <li>pageY : <span class="pageY">0</span>px</li>
+                    <li>screenX : <span class="screenX">0</span>px</li>
+                    <li>screenY : <span class="screenY">0</span>px</li>
+                </ul>
+            </div>
+        </section>
+    </section>
+
+
+    <!-- 스크립트 -->
+    <script src="../assets/js/jquery-1.12.4.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script>
+        $("body, html").mousemove(function (e) {
+            $(".clientX").text(e.clientX);
+            $(".clientY").text(e.clientY);
+            $(".offsetX").text(e.offsetX);
+            $(".offsetY").text(e.offsetY);
+            $(".pageX").text(e.pageX);
+            $(".pageY").text(e.pageY);
+            $(".screenX").text(e.screenX);
+            $(".screenY").text(e.screenY);
+
+            $(".cursor").css("left", e.pageX - 25).css("top", e.pageY - 25);
+        });
+
+        // window.addEventListener("mousemove", function () {
+        //     document.querySelector(".cursor").style.left = e.pageX - 25 + "px";
+        // })
+
+    </script>
+</body>
+
+</html>
