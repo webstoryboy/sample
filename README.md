@@ -10,7 +10,12 @@ https://webstoryboy.github.io/sample/assets/img/su06.jpg<br>
 https://webstoryboy.github.io/sample/assets/img/su07.jpg<br>
 https://webstoryboy.github.io/sample/assets/img/su08.jpg<br>
 https://webstoryboy.github.io/sample/assets/img/su09.jpg<br>
-https://webstoryboy.github.io/sample/assets/img/su10.jpg<br>
+https://webstoryboy.github.io/sample/assets/img/su10.jpg<br><br>
+
+스크립 샘플<br>
+https://webstoryboy.github.io/sample/assets/js/jquery-1.12.4.min.js<br>
+https://webstoryboy.github.io/sample/assets/js/jquery-ui.min.js<br>
+https://webstoryboy.github.io/sample/assets/js/gsap.min.js<br> <br>
 
 
 Mouse Effect - jquery<br>
