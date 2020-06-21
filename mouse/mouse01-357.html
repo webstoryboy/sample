@@ -12,7 +12,7 @@
                 href="https://github.com/webstoryboy/sample/tree/master/mouse">바로가기</a></p>
         <br />
         <p class="bubble warning">샘플 예제 <a class="color-values"
-                href="https://webstoryboy.github.io/sample/mouse/mouse01-jquery.html">바로가기</a></p>
+                href="https://webstoryboy.github.io/sample/mouse/mouse01-javascript.html">바로가기</a></p>
         <br />
     </div>
     <div class="code-preview">
@@ -22,8 +22,8 @@
                 <ul>
                     <li class="active"><a href="#">index.html</a></li>
                     <li><a href="#">style.css</a></li>
-                    <li><a href="#">jquery.js</a></li>
                     <li><a href="#">javascript.js</a></li>
+                    <li><a href="#">jquery.js</a></li>
                 </ul>
             </div>
             <div class="tab-cont">
@@ -183,35 +183,6 @@ body::before {
                 <!--//tab-cont2 -->
                 <div>
                     <pre class="line-numbers language-js"><code>&lt;!-- script --&gt;
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-    //마우스 움직이기
-    $(window).mousemove(function (event) {
-        $(".cursor").css({ left: event.clientX - 25, top: event.clientY - 25 });
-
-        $(".contents strong").hover(function () {
-            $(".cursor").addClass("active");
-        }, function () {
-            $(".cursor").removeClass("active");
-        });
-    });
-
-    //출력용
-    $(window).mousemove(function (event) {
-        $(".clientX").text(event.clientX);
-        $(".clientY").text(event.clientY);
-        $(".offsetX").text(event.offsetX);
-        $(".offsetY").text(event.offsetY);
-        $(".pageX").text(event.pageX);
-        $(".pageY").text(event.pageY);
-        $(".screenX").text(event.screenX);
-        $(".screenY").text(event.screenY);
-    });
-&lt;/script&gt;</code></pre>
-                </div>
-                <!--//tab-cont3 -->
-                <div>
-                    <pre class="line-numbers language-js"><code>&lt;!-- script --&gt;
 &lt;script&gt;
     //마우스 움직이기
     window.addEventListener("mousemove", function (event) {
@@ -262,6 +233,36 @@ body::before {
 &lt;/script&gt;</code></pre>
                 </div>
                 <!--//tab-cont4 -->
+                <div>
+                    <pre class="line-numbers language-js"><code>&lt;!-- script --&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    //마우스 움직이기
+    $(window).mousemove(function (event) {
+        $(".cursor").css({ left: event.clientX - 25, top: event.clientY - 25 });
+
+        $(".contents strong").hover(function () {
+            $(".cursor").addClass("active");
+        }, function () {
+            $(".cursor").removeClass("active");
+        });
+    });
+
+    //출력용
+    $(window).mousemove(function (event) {
+        $(".clientX").text(event.clientX);
+        $(".clientY").text(event.clientY);
+        $(".offsetX").text(event.offsetX);
+        $(".offsetY").text(event.offsetY);
+        $(".pageX").text(event.pageX);
+        $(".pageY").text(event.pageY);
+        $(".screenX").text(event.screenX);
+        $(".screenY").text(event.screenY);
+    });
+&lt;/script&gt;</code></pre>
+                </div>
+                <!--//tab-cont3 -->
+
             </div>
             <!-- //tab-cont-->
         </div>
