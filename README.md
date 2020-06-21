@@ -23,5 +23,5 @@ Mouse Effect - jquery<br>
 <a href="https://webstoryboy.github.io/sample/mouse/mouse02-jquery.html">02. Mouse Effect</a><br>
 
 Mouse Effect - javascript<br>
-<a href="https://webstoryboy.github.io/sample/mouse/mouse01-javascript.html">01. Mouse Effect</a>
-<a href="https://webstoryboy.github.io/sample/mouse/mouse02-javascript.html">02. Mouse Effect</a>
+<a href="https://webstoryboy.github.io/sample/mouse/mouse01-javascript.html">01. Mouse Effect</a><br>
+<a href="https://webstoryboy.github.io/sample/mouse/mouse02-javascript.html">02. Mouse Effect</a><br>
