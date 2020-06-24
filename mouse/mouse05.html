@@ -163,7 +163,6 @@
             pointer-events: none;
             transform: scale(1);
             transition: transform 0.3s ease-in-out;
-            mix-blend-mode: difference;
         }
 
         .cursor strong {
@@ -237,7 +236,7 @@
             top: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
-            font-size: 2vw;
+            font-size: 1.4vw;
             white-space: nowrap;
         }
     </style>
@@ -353,7 +352,6 @@
             this.style.setProperty("--x", 0)
             this.style.setProperty("--y", 0)
         });
-
 
         //출력용
         $(window).mousemove(function (e) {

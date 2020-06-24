@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect03 - jquery</title>
+    <style>
+        /* reset */
+        @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        ul {
+            padding: 10px 20px;
+        }
+
+        body {
+            background: url(../assets/img/su05.jpg) no-repeat center center;
+            background-size: cover;
+            font-family: 'Abel', 'GmarketSansMedium';
+            color: #fff;
+            height: 100vh;
+            transition: all 0.2s;
+            cursor: none;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: -1;
+        }
+
+        /* infor */
+        .infor {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .infor li {
+            list-style: none;
+            margin-bottom: 5px;
+        }
+
+        .infor li a {
+            color: #fff;
+        }
+
+        /* content */
+        .contents {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .contents p {
+            max-width: 80vw;
+            font-size: 3vw;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .contents p a {
+            color: orange;
+            font-weight: bold;
+            border-bottom: 2px dashed orange;
+        }
+
+        .contents p a.white {
+            color: blueviolet;
+            border-bottom: 2px dashed blueviolet;
+        }
+
+        .contents p a.blue {
+            color: brown;
+            border-bottom: 2px dashed brown;
+        }
+
+        .contents p a.aquamarine {
+            color: aquamarine;
+            border-bottom: 2px dashed aquamarine;
+        }
+
+        .cursor {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 1000;
+            user-select: none;
+            pointer-events: none;
+            transform: scale(12);
+            transition: transform 0.3s ease-in-out;
+            /* mix-blend-mode: normal;
+            mix-blend-mode: multiply;
+            mix-blend-mode: screen;
+            mix-blend-mode: overlay;
+            mix-blend-mode: darken; */
+            /* mix-blend-mode: lighten; */
+            /* mix-blend-mode: color-dodge; */
+            /* mix-blend-mode: color-burn; */
+            /* mix-blend-mode: hard-light; */
+            /* mix-blend-mode: soft-light; */
+            mix-blend-mode: difference;
+            /* mix-blend-mode: exclusion; */
+            /* mix-blend-mode: hue; */
+            /* mix-blend-mode: saturation; */
+            /* mix-blend-mode: color; */
+            /* mix-blend-mode: luminosity; */
+        }
+
+        .cursor.active {
+            transform: scale(12);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor"></div>
+
+    <div class="contents">
+        <p>Work and <a class="aquamarine">acquire</a>, and thou hast chained the wheel of <a class="blue">Chance.</a>
+        </p>
+        <p><a class="white">기회</a>를 찾아야 <a class="yellow">기회</a>를 만든다.</p>
+    </div>
+
+    <!-- script -->
+    <script src="https://webstoryboy.github.io/sample/assets/js/jquery-1.12.4.min.js"></script>
+    <script src="https://webstoryboy.github.io/sample/assets/js/gsap.min.js"></script>
+    <script>
+        $(document).mousemove(function (e) {
+            $(".cursor").css({ left: event.clientX - 5, top: event.clientY - 5 });
+        });
+    </script>
+</body>
+
+</html>

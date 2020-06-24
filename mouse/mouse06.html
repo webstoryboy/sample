@@ -45,7 +45,7 @@
         }
 
         body {
-            background: url(../assets/img/su08.jpg) no-repeat center center;
+            background: url(../assets/img/su02.jpg) no-repeat center center;
             background-size: cover;
             font-family: 'Abel', 'GmarketSansMedium';
             color: #fff;
@@ -62,7 +62,7 @@
             top: 0;
             width: 100%;
             height: 100vh;
-            background: rgba(36, 34, 34, 0.8);
+            background: rgba(0, 0, 0, 0.7);
             z-index: -1;
         }
 
@@ -153,8 +153,6 @@
             top: 20px;
         }
 
-
-
         /* contents */
         .contents {
             display: flex;
@@ -168,7 +166,7 @@
         }
 
         .move-image {
-            width: 120vmin;
+            width: 50vw;
             background: #ccc;
             position: relative;
         }
@@ -180,7 +178,8 @@
             transform: translate(-50%, -50%);
             font-size: 6vw;
             white-space: nowrap;
-            font-family: 'Bigshot One', cursive;
+            font-family: 'GmarketSansMedium';
+
         }
 
         .move-image .mtext em {
@@ -224,8 +223,8 @@
 
     <div class="infor3">
         <ul>
-            <li>clientX : <span class="clientX">0</span></li>
-            <li>clientY : <span class="clientY">0</span></li>
+            <li>mouseX : <span class="mouseX">0</span></li>
+            <li>mouseY : <span class="mouseY">0</span></li>
         </ul>
     </div>
 
@@ -254,7 +253,7 @@
     <div class="contents">
         <div class="move-image">
             <div class="mimg">
-                <img class="img" src="../assets/img/su08.jpg" alt="이미지">
+                <img class="img" src="../assets/img/su02.jpg" alt="이미지">
             </div>
             <div class="mtext">
                 <p><em class="word">Mouse</em> effect</p>
@@ -294,8 +293,12 @@
                                          ${-mouseX}px ${mouseY}px 0px rgba(255, 35, 251, 0.6),
                                          ${mouseY}px ${-mouseX}px 0px rgba(255, 255, 73, 0.6),
                                          ${-mouseY}px ${mouseX}px 0px rgba(102, 149, 255, 0.6)`;
-            })
+            });
+            document.querySelector(".mouseX").textContent = mouseX;
+            document.querySelector(".mouseY").textContent = mouseY;
         });
+
+
 
     </script>
 
