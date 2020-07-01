@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider01</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        body {
+            background: url(img/so01.jpg) no-repeat center center;
+            background-size: cover;
+            font-family: 'Abel', 'GmarketSansMedium';
+            color: #fff;
+            height: 100vh;
+            transition: all 0.2s;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(33, 37, 50, 1);
+            z-index: -1;
+        }
+
+        /* slide */
+        .slider-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .slider-img {
+            position: relative;
+            width: 800px;
+            height: 480px;
+            overflow: hidden;
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, .5);
+            border-radius: 4px;
+        }
+
+        .slider-img .slider {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .slider-img .slider em {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- contents -->
+    <div class="slider-wrap">
+        <div class="slider-img">
+            <div class="slider"><img src="../assets/img/su01.jpg" alt="이미지1"><em>1</em></div>
+            <div class="slider"><img src="../assets/img/su02.jpg" alt="이미지2"><em>2</em></div>
+            <div class="slider"><img src="../assets/img/su03.jpg" alt="이미지3"><em>3</em></div>
+            <div class="slider"><img src="../assets/img/su04.jpg" alt="이미지4"><em>4</em></div>
+            <div class="slider"><img src="../assets/img/su05.jpg" alt="이미지5"><em>5</em></div>
+        </div>
+    </div>
+
+
+    <!-- script -->
+    <script src="../assets/js/jquery-1.12.4.min.js"></script>
+    <script>
+        let slideWrap = $(".slider-wrap");
+        let slideImg = $(".slider-img");
+        let slides = $(".slider");
+
+        let currentIndex = 0;               //현재 첫 번재 보이는 이미지
+        let slideCount = slides.length;   //이미지 갯수
+
+        function showNext() {
+            let nextIndex = (currentIndex - 1) % slideCount;
+
+            slides.eq(currentIndex).fadeOut(500);
+            slides.eq(nextIndex).fadeIn(500);
+
+            currentIndex = nextIndex;
+        }
+        setInterval(showNext, 3000)
+    </script>
+</body>
+
+</html>
